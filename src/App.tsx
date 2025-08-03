@@ -8,7 +8,9 @@ import { items } from "./constant/index"
 import { TextReveal } from "@/components/magicui/text-reveal";
 import { SmoothCursor } from "@/components/ui/smooth-cursor";
 import TiltedCard from "./blocks/Components/TiltedCard/TiltedCard"
-
+import { VelocityScroll } from "@/components/magicui/scroll-based-velocity";
+import { CardSwipe } from "@/components/ui/card-swipe"
+import { images } from "./constant/index"
 
 export default function App() {
   return (
@@ -18,7 +20,7 @@ export default function App() {
           <Silk
             speed={5}
             scale={1}
-            color="#7B7481"
+            color="#d59d56"
             noiseIntensity={1.5}
             rotation={0}
           />
@@ -47,7 +49,7 @@ export default function App() {
         </div>
 
         <div className="relative z-10 p-10 text-white flex justify-center">
-          <WrapButton href="#menu" className="w-44 flex justify-center">Order Now</WrapButton>
+          <WrapButton href="#menu" className="w-84 text-3xl font-bold flex justify-center">ORDER NOW</WrapButton>
         </div>
 
         {/* <div className="relative z-10 p-10">
@@ -64,48 +66,22 @@ export default function App() {
           />
         </div> */}
 
-        <div className="relative z-10 p-10 flex justify-start gap-x-10 items-start">
-          <div className="flex flex-col gap-y-10">
-            <TiltedCard
-              imageSrc="https://i.scdn.co/image/ab67616d0000b273d9985092cd88bffd97653b58"
-              altText="PIZZA & PASTA"
-              captionText="PIZZA & PASTA"
-              containerHeight="300px"
-              containerWidth="300px"
-              imageHeight="300px"
-              imageWidth="300px"
-              rotateAmplitude={12}
-              scaleOnHover={1.2}
-              showMobileWarning={false}
-              showTooltip={true}
-              displayOverlayContent={true}
-              overlayContent={
-                <p className="font-semibold p-5">
-                  PIZZA & PASTA
-                </p>
-              }
-            />
-            <TiltedCard
-              imageSrc="https://i.scdn.co/image/ab67616d0000b273d9985092cd88bffd97653b58"
-              altText="PIZZA & PASTA"
-              captionText="PIZZA & PASTA"
-              containerHeight="300px"
-              containerWidth="300px"
-              imageHeight="300px"
-              imageWidth="300px"
-              rotateAmplitude={12}
-              scaleOnHover={1.2}
-              showMobileWarning={false}
-              showTooltip={true}
-              displayOverlayContent={true}
-              overlayContent={
-                <p className="font-semibold p-5">
-                  PIZZA & PASTA
-                </p>
-              }
-            />
-          </div>
+        <div className="relative z-10 my-28 px-10 flex justify-start gap-x-10 items-start">
+          <TiltedCard
+            imageSrc="./cas-owner.jpg"
+            altText="PIZZA & PASTA"
+            captionText="PIZZA & PASTA"
+            containerHeight="300px"
+            containerWidth="300px"
+            imageHeight="300px"
+            imageWidth="300px"
+            rotateAmplitude={12}
+            scaleOnHover={1.2}
+            showMobileWarning={false}
+            showTooltip={true}
+            displayOverlayContent={true}
 
+          />
           <div>
             <TextType
               className="font-bold text-5xl"
@@ -115,15 +91,23 @@ export default function App() {
               showCursor={true}
               cursorCharacter="_"
             />
-            <TextReveal className="text-orange-400">
-              Magic UI will change the way you design.
-              Magic UI will change the way you design.
-              Magic UI will change the way you design.
-              Magic UI will change the way you design.
-              Magic UI will change the way you design.
-              Magic UI will change the way you design.
-              Magic UI will change the way you design.
+            <TextReveal className="font-normal">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quos quo nihil itaque similique ad dignissimos quisquam asperiores laudantium deleniti laborum, a magnam placeat. Dolore, reiciendis sint iste earum voluptatem repellendus! Dolore, reiciendis sint iste earum voluptatem repellendus!
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quos quo nihil itaque similique ad dignissimos quisquam asperiores laudantium deleniti laborum, a magnam placeat.
             </TextReveal>
+          </div>
+        </div>
+
+        <div className="w-full relative z-10 my-28">
+          <VelocityScroll>OUR MENU</VelocityScroll>
+        </div>
+
+        <div className="w-full relative z-10 mt-40 flex justify-center  items-start">
+          <div className="w-[60vw]">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati aperiam neque sunt reprehenderit impedit velit quas sequi, eveniet accusamus eligendi necessitatibus enim soluta inventore saepe quos corporis aspernatur at tempora.
+          </div>
+          <div className="w-[40vw]">
+            <CardSwipe images={images} autoplayDelay={1000} slideShadows={false} />
           </div>
         </div>
 
