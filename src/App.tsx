@@ -11,6 +11,7 @@ import TiltedCard from "./blocks/Components/TiltedCard/TiltedCard"
 import { VelocityScroll } from "@/components/magicui/scroll-based-velocity";
 import { CardSwipe } from "@/components/ui/card-swipe"
 import { images } from "./constant/index"
+import { RestaurantMenu } from "./components/ResturantMenu"
 
 export default function App() {
   return (
@@ -103,12 +104,12 @@ export default function App() {
         </div>
 
         <div className="w-full relative z-10 mt-40 flex justify-center  items-start">
-          <div className="w-[60vw]">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati aperiam neque sunt reprehenderit impedit velit quas sequi, eveniet accusamus eligendi necessitatibus enim soluta inventore saepe quos corporis aspernatur at tempora.
-          </div>
-          <div className="w-[40vw]">
+            <RestaurantMenu />
+          {/* <div className="w-[60vw]">
+          </div> */}
+          {/* <div className="w-[40vw]">
             <CardSwipe images={images} autoplayDelay={1000} slideShadows={false} />
-          </div>
+          </div> */}
         </div>
 
         <div className="cursor-none">
