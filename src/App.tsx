@@ -3,15 +3,14 @@ import CircularGallery from './blocks/Components/CircularGallery/CircularGallery
 import TextType from "./blocks/TextAnimations/TextType/TextType"
 import { NavbarDemo } from "./components/NavbarDemo"
 import WrapButton from "./components/ui/wrap-button"
-import Masonry from './blocks/Components/Masonry/Masonry';
-import { items } from "./constant/index"
 import { TextReveal } from "@/components/magicui/text-reveal";
 import { SmoothCursor } from "@/components/ui/smooth-cursor";
 import TiltedCard from "./blocks/Components/TiltedCard/TiltedCard"
 import { VelocityScroll } from "@/components/magicui/scroll-based-velocity";
 import { RestaurantMenu } from "./components/ResturantMenu"
 import BlurGallery from "./components/Gallery"
-import TextTrail from "./blocks/TextAnimations/TextTrail/TextTrail"
+import Footer from "./components/Footer"
+
 
 export default function App() {
   return (
@@ -52,20 +51,6 @@ export default function App() {
         <div className="relative z-10 p-10 text-white flex justify-center">
           <WrapButton href="#menu" className="w-84 text-3xl font-bold flex justify-center">ORDER NOW</WrapButton>
         </div>
-
-        {/* <div className="relative z-10 p-10">
-          <Masonry
-            items={items}
-            ease="power3.out"
-            duration={0.6}
-            stagger={0.05}
-            animateFrom="bottom"
-            scaleOnHover={true}
-            hoverScale={0.95}
-            blurToFocus={true}
-            colorShiftOnHover={true}
-          />
-        </div> */}
 
         <div className="relative z-10 my-28 px-10 flex justify-start gap-x-10 items-start">
           <TiltedCard
@@ -115,22 +100,8 @@ export default function App() {
           <BlurGallery />
         </div>
 
-        <div className="w-full relative z-10 mt-28">
-          <TextTrail
-            text="React Bits"
-            fontFamily="Figtree"
-            fontWeight="900"
-            noiseFactor={1.2}
-            noiseScale={0.001}
-            rgbPersistFactor={0.95}
-            alphaPersistFactor={0.92}
-            animateColor={true}
-            startColor="#ff6b6b"
-            textColor="#4ecdc4"
-            backgroundColor="#1a1a2e"
-            colorCycleInterval={2000}
-            supersample={2}
-          />
+        <div className="w-full text-white relative z-10 mt-28">
+          <Footer />
         </div>
 
         <div className="cursor-none">
