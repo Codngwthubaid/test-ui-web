@@ -4,7 +4,6 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { Button } from './ui/button';
 import { Badge } from './ui/badge';
 import type { MenuItem } from '../types/menu';
-import { ShineBorder } from './magicui/shine-border';
 
 interface MenuCardProps {
   item: MenuItem;

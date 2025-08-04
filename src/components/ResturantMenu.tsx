@@ -6,8 +6,6 @@ import { CartSummary } from './CartSummary';
 import { menuItems } from '../constant/index';
 import type { MenuItem, CartItem } from '../types/menu';
 import { useRazorpay } from '../hooks/useRazorpay';
-import { CardSwipe } from "@/components/ui/card-swipe"
-import { images } from "../constant/index"
 
 export const RestaurantMenu: React.FC = () => {
   const [selectedTab, setSelectedTab] = useState('pizza');
