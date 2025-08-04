@@ -10,19 +10,31 @@ import { VelocityScroll } from "@/components/magicui/scroll-based-velocity";
 import { RestaurantMenu } from "./components/ResturantMenu"
 import BlurGallery from "./components/Gallery"
 import Footer from "./components/Footer"
-
+import LightRays from "./blocks/Backgrounds/LightRays/LightRays"
 
 export default function App() {
   return (
     <>
       <div className="relative h-full">
         <div className="absolute inset-0 -z-10">
-          <Silk
+          {/* <Silk
             speed={5}
             scale={1}
             color="#d59d56"
             noiseIntensity={1.5}
             rotation={0}
+          /> */}
+          <LightRays
+            raysOrigin="top-center"
+            raysColor="#f4aea2"
+            raysSpeed={1.5}
+            lightSpread={0.8}
+            rayLength={1.2}
+            followMouse={true}
+            mouseInfluence={0.1}
+            noiseAmount={0.1}
+            distortion={0.05}
+            className="bg-black"
           />
         </div>
 
