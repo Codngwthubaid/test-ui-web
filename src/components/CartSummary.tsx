@@ -4,6 +4,7 @@ import { Card, CardContent, CardHeader, CardTitle } from './ui/card';
 import { Button } from './ui/button';
 import { Badge } from './ui/badge';
 import type { CartItem } from '../types/menu';
+import { ShineBorder } from "../components/magicui/shine-border";
 
 interface CartSummaryProps {
   cartItems: CartItem[];
@@ -23,12 +24,12 @@ export const CartSummary: React.FC<CartSummaryProps> = ({
 
   if (cartItems.length === 0) {
     return (
-      <Card className="sticky top-4">
+      <Card className="sticky top-4 bg-transparent">
         <CardHeader className="text-center">
           <div className="flex justify-center mb-2">
-            <ShoppingBag className="h-12 w-12 text-gray-400" />
+            <ShoppingBag className="h-12 w-12 text-white" />
           </div>
-          <CardTitle className="text-gray-500">Your cart is empty</CardTitle>
+          <CardTitle className="text-white">Your cart is empty</CardTitle>
         </CardHeader>
       </Card>
     );
@@ -36,6 +37,7 @@ export const CartSummary: React.FC<CartSummaryProps> = ({
 
   return (
     <Card className="sticky top-4 shadow-lg bg-transparent">
+      <ShineBorder shineColor={["#A07CFE", "#FE8FB5", "#FFBE7B"]} />
       <CardHeader>
         <CardTitle className="flex items-center justify-between">
           <span className="flex items-center gap-2 text-white">
@@ -47,7 +49,7 @@ export const CartSummary: React.FC<CartSummaryProps> = ({
           </Badge>
         </CardTitle>
       </CardHeader>
-      
+
       <CardContent className="space-y-4">
         <div className="max-h-80 overflow-y-auto space-y-3">
           {cartItems.map((item) => (
@@ -92,13 +94,13 @@ export const CartSummary: React.FC<CartSummaryProps> = ({
             </div>
           ))}
         </div>
-        
+
         <div className="border-t pt-4">
           <div className="flex justify-between items-center mb-4">
             <span className="text-lg font-semibold text-white">Total:</span>
             <span className="text-2xl font-bold text-amber-600">₹{total}</span>
           </div>
-          
+
           <Button
             onClick={onCheckout}
             className="w-full bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white font-semibold py-3 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300"

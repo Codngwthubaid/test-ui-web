@@ -65,9 +65,13 @@ export const items = [
 export const images = [
     { src: "./cas-02.jpg", alt: "Image 2" },
     { src: "./cas-03.jpg", alt: "Image 3" },
-    { src: "./cas-04.jpg", alt: "Image 1" },
-    { src: "./cas-05.jpg", alt: "Image 1" },
-    { src: "./cas-06.jpg", alt: "Image 1" },
+    { src: "./cas-04.jpg", alt: "Image 4" },
+    { src: "./cas-05.jpg", alt: "Image 5" },
+    { src: "./cas-06.jpg", alt: "Image 6" },
+    { src: "./cas-07.jpg", alt: "Image 7" },
+    { src: "./cas-08.jpg", alt: "Image 8" },
+    { src: "./cas-09.jpg", alt: "Image 9" },
+    { src: "./cas-10.jpg", alt: "Image 10" },
 ]
 
 

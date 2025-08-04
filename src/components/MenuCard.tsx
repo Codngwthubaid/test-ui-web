@@ -4,6 +4,7 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { Button } from './ui/button';
 import { Badge } from './ui/badge';
 import type { MenuItem } from '../types/menu';
+import { ShineBorder } from './magicui/shine-border';
 
 interface MenuCardProps {
   item: MenuItem;
@@ -24,18 +25,18 @@ export const MenuCard: React.FC<MenuCardProps> = ({
   };
 
   return (
-    <Card className="bg-transparent group hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 overflow-hidden">
+    <Card className="bg-transparent group hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 overflow-hidden pb-6 pt-0">
+
       <div className="aspect-video overflow-hidden">
-        <img 
-          src={item.image} 
+        <img
+          src={item.image}
           alt={item.name}
           className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
         />
       </div>
-      
       <CardHeader className="pb-3">
         <div className="flex justify-between items-start">
-          <CardTitle className="text-lg font-bold text-gray-900 group-hover:text-amber-600 transition-colors">
+          <CardTitle className="text-lg font-bold text-white group-hover:text-amber-600 transition-colors">
             {item.name}
           </CardTitle>
           <Badge variant="secondary" className="bg-amber-100 text-amber-800 font-semibold">
@@ -53,9 +54,9 @@ export const MenuCard: React.FC<MenuCardProps> = ({
             <h4 className="text-sm font-semibold text-white mb-2">Ingredients:</h4>
             <div className="flex flex-wrap gap-1">
               {item.ingredients.map((ingredient, index) => (
-                <Badge 
-                  key={index} 
-                  variant="outline" 
+                <Badge
+                  key={index}
+                  variant="outline"
                   className="text-xs bg-gray-50 text-gray-700 border-gray-200"
                 >
                   {ingredient}
@@ -92,7 +93,7 @@ export const MenuCard: React.FC<MenuCardProps> = ({
             </>
           )}
         </div>
-        
+
         <Button
           onClick={() => {
             if (quantity === 0) {

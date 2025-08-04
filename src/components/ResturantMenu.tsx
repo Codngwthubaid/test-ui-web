@@ -165,7 +165,6 @@ export const RestaurantMenu: React.FC = () => {
         </div>
 
         <div className="lg:col-span-1">
-          <CardSwipe images={images} autoplayDelay={1000} slideShadows={false} />
           <CartSummary
             cartItems={cartItems}
             onRemoveItem={handleRemoveItem}

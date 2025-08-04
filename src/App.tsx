@@ -10,6 +10,8 @@ import { SmoothCursor } from "@/components/ui/smooth-cursor";
 import TiltedCard from "./blocks/Components/TiltedCard/TiltedCard"
 import { VelocityScroll } from "@/components/magicui/scroll-based-velocity";
 import { RestaurantMenu } from "./components/ResturantMenu"
+import BlurGallery from "./components/Gallery"
+import TextTrail from "./blocks/TextAnimations/TextTrail/TextTrail"
 
 export default function App() {
   return (
@@ -101,8 +103,34 @@ export default function App() {
           <VelocityScroll>OUR MENU</VelocityScroll>
         </div>
 
-        <div className="w-full relative z-10 mt-40 flex justify-center  items-start">
+        <div className="w-full relative z-10 mt-40 flex justify-center items-start">
           <RestaurantMenu />
+        </div>
+
+        <div className="w-full relative z-10 my-28">
+          <VelocityScroll>OUR GALLERY</VelocityScroll>
+        </div>
+
+        <div className="w-full relative z-10 mt-40 flex justify-center items-start">
+          <BlurGallery />
+        </div>
+
+        <div className="w-full relative z-10 mt-28">
+          <TextTrail
+            text="React Bits"
+            fontFamily="Figtree"
+            fontWeight="900"
+            noiseFactor={1.2}
+            noiseScale={0.001}
+            rgbPersistFactor={0.95}
+            alphaPersistFactor={0.92}
+            animateColor={true}
+            startColor="#ff6b6b"
+            textColor="#4ecdc4"
+            backgroundColor="#1a1a2e"
+            colorCycleInterval={2000}
+            supersample={2}
+          />
         </div>
 
         <div className="cursor-none">
