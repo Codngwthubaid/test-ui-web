@@ -2,7 +2,7 @@
 	Installed from https://reactbits.dev/ts/tailwind/
 */
 
-import React, { ReactNode, useLayoutEffect, useRef, useCallback } from "react";
+import React, { type ReactNode, useLayoutEffect, useRef, useCallback } from "react";
 import Lenis from "lenis";
 
 export interface ScrollStackItemProps {
@@ -189,7 +189,7 @@ const ScrollStack: React.FC<ScrollStackProps> = ({
       wrapper: scroller,
       content: scroller.querySelector('.scroll-stack-inner') as HTMLElement,
       duration: 1.2,
-      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+      easing: (t:any) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
       smoothWheel: true,
       touchMultiplier: 2,
       infinite: false,
