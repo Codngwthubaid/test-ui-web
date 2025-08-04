@@ -24,7 +24,7 @@ export const MenuCard: React.FC<MenuCardProps> = ({
   };
 
   return (
-    <Card className="group hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 overflow-hidden">
+    <Card className="bg-transparent group hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 overflow-hidden">
       <div className="aspect-video overflow-hidden">
         <img 
           src={item.image} 
@@ -42,7 +42,7 @@ export const MenuCard: React.FC<MenuCardProps> = ({
             ₹{item.price}
           </Badge>
         </div>
-        <CardDescription className="text-gray-600 leading-relaxed">
+        <CardDescription className="text-gray-300 leading-relaxed">
           {item.description}
         </CardDescription>
       </CardHeader>
@@ -50,7 +50,7 @@ export const MenuCard: React.FC<MenuCardProps> = ({
       <CardContent className="pb-4">
         <div className="space-y-3">
           <div>
-            <h4 className="text-sm font-semibold text-gray-700 mb-2">Ingredients:</h4>
+            <h4 className="text-sm font-semibold text-white mb-2">Ingredients:</h4>
             <div className="flex flex-wrap gap-1">
               {item.ingredients.map((ingredient, index) => (
                 <Badge 

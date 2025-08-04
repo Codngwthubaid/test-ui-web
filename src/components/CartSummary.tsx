@@ -35,10 +35,10 @@ export const CartSummary: React.FC<CartSummaryProps> = ({
   }
 
   return (
-    <Card className="sticky top-4 shadow-lg">
+    <Card className="sticky top-4 shadow-lg bg-transparent">
       <CardHeader>
         <CardTitle className="flex items-center justify-between">
-          <span className="flex items-center gap-2">
+          <span className="flex items-center gap-2 text-white">
             <ShoppingBag className="h-5 w-5" />
             Your Order
           </span>
@@ -95,7 +95,7 @@ export const CartSummary: React.FC<CartSummaryProps> = ({
         
         <div className="border-t pt-4">
           <div className="flex justify-between items-center mb-4">
-            <span className="text-lg font-semibold">Total:</span>
+            <span className="text-lg font-semibold text-white">Total:</span>
             <span className="text-2xl font-bold text-amber-600">₹{total}</span>
           </div>
           
