@@ -1,3 +1,5 @@
+
+import Silk from "./blocks/Backgrounds/Silk/Silk"
 import CircularGallery from './blocks/Components/CircularGallery/CircularGallery'
 import TextType from "./blocks/TextAnimations/TextType/TextType"
 import { NavbarDemo } from "./components/NavbarDemo"
@@ -18,7 +20,7 @@ export default function App() {
       <div className="fixed inset-0 -z-10 w-full h-full">
         <LightRays
           raysOrigin="top-center"
-          raysColor="#078168"
+          raysColor="#f4aea2"
           raysSpeed={1.5}
           lightSpread={0.8}
           rayLength={1.2}
