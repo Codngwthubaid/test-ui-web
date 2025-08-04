@@ -1,10 +1,8 @@
 /*
-	Installed from https://reactbits.dev/ts/tailwind/
+  Installed from https://reactbits.dev/ts/tailwind/
 */
 
-"use client";
-
-import { ElementType, useEffect, useRef, useState, createElement } from "react";
+import { type ElementType, useEffect, useRef, useState, createElement } from "react";
 import { gsap } from "gsap";
 
 interface TextTypeProps {
@@ -125,7 +123,7 @@ const TextType = ({
 
           setCurrentTextIndex((prev) => (prev + 1) % textArray.length);
           setCurrentCharIndex(0);
-          timeout = setTimeout(() => {}, pauseDuration);
+          timeout = setTimeout(() => { }, pauseDuration);
         } else {
           timeout = setTimeout(() => {
             setDisplayedText((prev) => prev.slice(0, -1));
