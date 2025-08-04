@@ -1,7 +1,5 @@
-"use client";
-
 import { motion, useSpring } from "motion/react";
-import { FC, JSX, useEffect, useRef, useState } from "react";
+import { type FC, type JSX, useEffect, useRef, useState } from "react";
 
 interface Position {
   x: number;
@@ -95,6 +93,7 @@ export function SmoothCursor({
   const lastUpdateTime = useRef(Date.now());
   const previousAngle = useRef(0);
   const accumulatedRotation = useRef(0);
+  console.log("SmoothCursor rendered", isMoving);
 
   const cursorX = useSpring(0, springConfig);
   const cursorY = useSpring(0, springConfig);
