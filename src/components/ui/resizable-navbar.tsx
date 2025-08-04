@@ -235,28 +235,40 @@ export const NavbarLogo = () => {
       href="#"
       className="relative z-20 mr-4 flex items-center space-x-2 px-2 py-1 text-sm font-normal text-black"
     >
-      <span className="text-black text-4xl font-bold">C&S</span>
+      <span className="text-blck text-4xl font-bold">C&S</span>
     </a>
   );
 };
 
-export const NavbarButton = ({
-  href,
-  as: Tag = "a",
-  children,
-  className,
-  variant = "primary",
-  ...props
-}: {
-  href?: string;
-  as?: React.ElementType;
+type NavbarButtonPropsBase = {
   children: React.ReactNode;
   className?: string;
   variant?: "primary" | "secondary" | "dark" | "gradient";
-} & (
-  | React.ComponentPropsWithoutRef<"a">
-  | React.ComponentPropsWithoutRef<"button">
-)) => {
+};
+
+type NavbarButtonAnchorProps = NavbarButtonPropsBase &
+  React.ComponentPropsWithoutRef<"a"> & {
+    as?: "a";
+    href: string;
+  };
+
+type NavbarButtonButtonProps = NavbarButtonPropsBase &
+  React.ComponentPropsWithoutRef<"button"> & {
+    as: "button";
+    href?: undefined;
+  };
+
+type NavbarButtonProps = NavbarButtonAnchorProps | NavbarButtonButtonProps;
+
+export const NavbarButton = (props: NavbarButtonProps) => {
+  const {
+    as = "a",
+    children,
+    className,
+    variant = "primary",
+    ...rest
+  } = props as NavbarButtonProps & { as?: string };
+
   const baseStyles =
     "px-4 py-2 rounded-md bg-white button bg-white text-black text-sm font-bold relative cursor-pointer hover:-translate-y-0.5 transition duration-200 inline-block text-center";
 
@@ -269,13 +281,25 @@ export const NavbarButton = ({
       "bg-gradient-to-b from-blue-500 to-blue-700 text-white shadow-[0px_2px_0px_0px_rgba(255,255,255,0.3)_inset]",
   };
 
+  if (as === "button") {
+    const {...buttonProps } = rest as React.ComponentPropsWithoutRef<"button">;
+    return (
+      <button
+        className={cn(baseStyles, variantStyles[variant], className)}
+        {...buttonProps}
+      >
+        {children}
+      </button>
+    );
+  }
+
+  // Default to anchor
   return (
-    <Tag
-      href={href || undefined}
+    <a
       className={cn(baseStyles, variantStyles[variant], className)}
-      {...props}
+      {...(rest as React.ComponentPropsWithoutRef<"a">)}
     >
       {children}
-    </Tag>
+    </a>
   );
 };
