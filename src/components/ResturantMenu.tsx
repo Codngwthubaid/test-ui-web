@@ -135,7 +135,7 @@ export const RestaurantMenu: React.FC = () => {
                   <TabsTrigger
                     key={tab.value}
                     value={tab.value}
-                    className="flex items-center gap-2 text-lg font-semibold data-[state=active]:bg-gradient-to-r data-[state=active]:from-orange-500 data-[state=active]:to-orange-500 text-white border border-gray-200"
+                    className="flex items-center gap-2 text-lg font-semibold data-[state=active]:bg-gradient-to-r data-[state=active]:from-emerald-400 data-[state=active]:to-emerald-400 text-white border border-gray-200"
                   >
                     <IconComponent className="h-5 w-5" />
                     <span className="hidden sm:inline">{tab.label}</span>
@@ -145,7 +145,11 @@ export const RestaurantMenu: React.FC = () => {
             </TabsList>
 
             {tabConfig.map((tab) => (
-              <TabsContent key={tab.value} value={tab.value} className="space-y-6">
+              <TabsContent
+                key={tab.value}
+                value={tab.value}
+                className="space-y-6 max-h-[1300px] overflow-y-auto pr-2"
+              >
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   {categorizedItems[tab.value as keyof typeof categorizedItems]?.map((item) => (
                     <MenuCard
@@ -158,6 +162,7 @@ export const RestaurantMenu: React.FC = () => {
                   ))}
                 </div>
               </TabsContent>
+
             ))}
           </Tabs>
         </div>

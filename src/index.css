@@ -42,15 +42,18 @@
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
   --animate-shine: shine var(--duration) infinite linear;
+
   @keyframes shine {
-  0% {
-    background-position: 0% 0%;
+    0% {
+      background-position: 0% 0%;
     }
-  50% {
-    background-position: 100% 100%;
+
+    50% {
+      background-position: 100% 100%;
     }
-  to {
-    background-position: 0% 0%;
+
+    to {
+      background-position: 0% 0%;
     }
   }
 }
@@ -139,4 +142,108 @@ body {
   font-family: "Google Sans Code", monospace;
   font-optical-sizing: auto;
   font-style: normal;
+  scroll-behavior: smooth;
 }
+
+
+/* CurvedText.css */
+.curved-text {
+  display: inline-flex;
+  justify-content: center;
+}
+
+.curved-text span {
+  display: inline-block;
+}
+
+/* Upward curve for text-8xl */
+.curved-text-8xl span:nth-child(1) {
+  transform: translateY(-30px);
+}
+
+/* T */
+.curved-text-8xl span:nth-child(2) {
+  transform: translateY(-25px);
+}
+
+/* O */
+.curved-text-8xl span:nth-child(3) {
+  transform: translateY(-20px);
+}
+
+/* D */
+.curved-text-8xl span:nth-child(4) {
+  transform: translateY(-15px);
+}
+
+/* A */
+.curved-text-8xl span:nth-child(5) {
+  transform: translateY(-10px);
+}
+
+/* Y */
+.curved-text-8xl span:nth-child(6) {
+  transform: translateY(-15px);
+}
+
+/* Space */
+.curved-text-8xl span:nth-child(7) {
+  transform: translateY(-20px);
+}
+
+/* I */
+.curved-text-8xl span:nth-child(8) {
+  transform: translateY(-25px);
+}
+
+/* ' */
+.curved-text-8xl span:nth-child(9) {
+  transform: translateY(-30px);
+}
+
+/* M */
+.curved-text-8xl span:nth-child(10) {
+  transform: translateY(-25px);
+}
+
+/* Space */
+.curved-text-8xl span:nth-child(11) {
+  transform: translateY(-20px);
+}
+
+/* F */
+.curved-text-8xl span:nth-child(12) {
+  transform: translateY(-15px);
+}
+
+/* E */
+.curved-text-8xl span:nth-child(13) {
+  transform: translateY(-10px);
+}
+
+/* E */
+.curved-text-8xl span:nth-child(14) {
+  transform: translateY(-15px);
+}
+
+/* L */
+.curved-text-8xl span:nth-child(15) {
+  transform: translateY(-20px);
+}
+
+/* I */
+.curved-text-8xl span:nth-child(16) {
+  transform: translateY(-25px);
+}
+
+/* N */
+.curved-text-8xl span:nth-child(17) {
+  transform: translateY(-30px);
+}
+
+/* G */
+.curved-text-8xl span:nth-child(18) {
+  transform: translateY(-25px);
+}
+
+/* ... */

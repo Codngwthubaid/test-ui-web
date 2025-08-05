@@ -8,8 +8,8 @@ import {
   useState,
   useMemo,
   useId,
-  FC,
-  PointerEvent,
+  type FC,
+  type PointerEvent,
 } from "react";
 
 interface CurvedLoopProps {

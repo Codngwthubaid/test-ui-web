@@ -24,19 +24,17 @@ export default function Footer() {
     return (
         <footer className="w-full bg-transparent px-4 py-6 mt-10">
             <div className="flex justify-between items-center flex-wrap gap-4">
-                {/* Top Left - FlipLink */}
                 <FlipLink href="#">C&S</FlipLink>
 
-                {/* Top Right - Social Links */}
                 <div className="flex gap-4">
                     <Button variant="ghost" size="icon" asChild>
                         <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
-                            <Instagram className="size-7" />
+                            <Instagram className="size-7 text-black" />
                         </a>
                     </Button>
                     <Button variant="ghost" size="icon" asChild>
                         <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
-                            <Facebook className="size-7" />
+                            <Facebook className="size-7 text-black" />
                         </a>
                     </Button>
                 </div>
@@ -44,7 +42,7 @@ export default function Footer() {
 
             {/* Bottom - Date, Time, and Author */}
             <div className="flex justify-between items-center flex-wrap mt-6 text-sm text-muted-foreground">
-                <div className="flex justify-between items-center w-full text-white text-lg">
+                <div className="flex justify-between items-center w-full text-black text-lg">
                     <span>Built with ❤️ by codngwthubaid</span>
                     <span>{dateTime}</span>
                 </div>

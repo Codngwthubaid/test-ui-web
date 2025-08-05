@@ -9,21 +9,20 @@ import {
   MobileNavMenu,
 } from "@/components/ui/resizable-navbar";
 import { useState } from "react";
-import { InteractiveHoverButton } from "@/components/magicui/interactive-hover-button";
 
 export function NavbarDemo() {
   const navItems = [
     {
-      name: "Features",
-      link: "#features",
+      name: "About",
+      link: "#about",
     },
     {
-      name: "Pricing",
-      link: "#pricing",
+      name: "Menu",
+      link: "#menu",
     },
     {
-      name: "Contact",
-      link: "#contact",
+      name: "Gallery",
+      link: "#gallery",
     },
   ];
 
@@ -32,9 +31,9 @@ export function NavbarDemo() {
   return (
     <div className="relative w-full">
       <Navbar>
-        <NavBody className="flex justify-between">
-            <NavbarLogo />
-            <NavItems items={navItems} className="text-white text-lg" />
+        <NavBody>
+            <NavbarLogo/>
+            <NavItems items={navItems} className="text-white text-2xl" />
         </NavBody>
 
         <MobileNav>
@@ -60,14 +59,6 @@ export function NavbarDemo() {
                 <span className="block">{item.name}</span>
               </a>
             ))}
-            {/* <div className="flex w-full flex-col gap-4">
-              <InteractiveHoverButton
-                onClick={() => setIsMobileMenuOpen(false)}
-                className="w-full"
-              >
-                View Menu
-              </InteractiveHoverButton>;
-            </div> */}
           </MobileNavMenu>
         </MobileNav>
       </Navbar>

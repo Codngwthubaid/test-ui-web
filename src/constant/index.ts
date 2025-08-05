@@ -229,5 +229,32 @@ export const menuItems: MenuItem[] = [
         ingredients: ['Vanilla Gelato', 'Chocolate Gelato', 'Strawberry Gelato', 'Pistachio Gelato', 'Wafer Cone'],
         category: 'desserts',
         image: 'https://images.pexels.com/photos/1362534/pexels-photo-1362534.jpeg?auto=compress&cs=tinysrgb&w=500'
+    },
+    {
+        id: 'dessert-4',
+        name: 'Gelato Selection',
+        description: 'Choice of three scoops from our artisanal gelato collection',
+        price: 249,
+        ingredients: ['Vanilla Gelato', 'Chocolate Gelato', 'Strawberry Gelato', 'Pistachio Gelato', 'Wafer Cone'],
+        category: 'desserts',
+        image: 'https://images.pexels.com/photos/1362534/pexels-photo-1362534.jpeg?auto=compress&cs=tinysrgb&w=500'
+    },
+    {
+        id: 'dessert-4',
+        name: 'Gelato Selection',
+        description: 'Choice of three scoops from our artisanal gelato collection',
+        price: 249,
+        ingredients: ['Vanilla Gelato', 'Chocolate Gelato', 'Strawberry Gelato', 'Pistachio Gelato', 'Wafer Cone'],
+        category: 'desserts',
+        image: 'https://images.pexels.com/photos/1362534/pexels-photo-1362534.jpeg?auto=compress&cs=tinysrgb&w=500'
+    },
+    {
+        id: 'dessert-4',
+        name: 'Gelato Selection',
+        description: 'Choice of three scoops from our artisanal gelato collection',
+        price: 249,
+        ingredients: ['Vanilla Gelato', 'Chocolate Gelato', 'Strawberry Gelato', 'Pistachio Gelato', 'Wafer Cone'],
+        category: 'desserts',
+        image: 'https://images.pexels.com/photos/1362534/pexels-photo-1362534.jpeg?auto=compress&cs=tinysrgb&w=500'
     }
 ];

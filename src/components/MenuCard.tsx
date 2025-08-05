@@ -35,14 +35,14 @@ export const MenuCard: React.FC<MenuCardProps> = ({
       </div>
       <CardHeader className="pb-3">
         <div className="flex justify-between items-start">
-          <CardTitle className="text-lg font-bold text-white group-hover:text-amber-600 transition-colors">
+          <CardTitle className="text-lg font-bold text-amber-600 transition-colors">
             {item.name}
           </CardTitle>
           <Badge variant="secondary" className="bg-amber-100 text-amber-800 font-semibold">
             ₹{item.price}
           </Badge>
         </div>
-        <CardDescription className="text-gray-300 leading-relaxed">
+        <CardDescription className="text-black leading-relaxed">
           {item.description}
         </CardDescription>
       </CardHeader>
@@ -50,7 +50,7 @@ export const MenuCard: React.FC<MenuCardProps> = ({
       <CardContent className="pb-4">
         <div className="space-y-3">
           <div>
-            <h4 className="text-sm font-semibold text-white mb-2">Ingredients:</h4>
+            <h4 className="text-base font-semibold text-orange-400 mb-2">Ingredients:</h4>
             <div className="flex flex-wrap gap-1">
               {item.ingredients.map((ingredient, index) => (
                 <Badge
@@ -100,7 +100,7 @@ export const MenuCard: React.FC<MenuCardProps> = ({
             }
             onAddToCart(item);
           }}
-          className="bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-600 hover:to-orange-600 text-white font-semibold px-6 py-2 rounded-full shadow-lg hover:shadow-xl transition-all duration-300"
+          className="bg-gradient-to-r from-emerald-400 to-emerald-400 hover:from-emerald-600 hover:to-emerald-600 text-white font-semibold px-6 py-2 rounded-full shadow-lg hover:shadow-xl transition-all duration-300"
         >
           {quantity > 0 ? 'Add More' : 'Add to Cart'}
         </Button>
