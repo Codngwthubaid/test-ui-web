@@ -32,12 +32,9 @@ export function NavbarDemo() {
   return (
     <div className="relative w-full">
       <Navbar>
-        <NavBody>
-          <NavbarLogo />
-          <NavItems items={navItems} className="text-white text-lg" />
-          <div className="flex items-center gap-4">
-            <InteractiveHoverButton>View Menu</InteractiveHoverButton>
-          </div>
+        <NavBody className="flex justify-between">
+            <NavbarLogo />
+            <NavItems items={navItems} className="text-white text-lg" />
         </NavBody>
 
         <MobileNav>
@@ -63,14 +60,14 @@ export function NavbarDemo() {
                 <span className="block">{item.name}</span>
               </a>
             ))}
-            <div className="flex w-full flex-col gap-4">
+            {/* <div className="flex w-full flex-col gap-4">
               <InteractiveHoverButton
                 onClick={() => setIsMobileMenuOpen(false)}
                 className="w-full"
               >
                 View Menu
               </InteractiveHoverButton>;
-            </div>
+            </div> */}
           </MobileNavMenu>
         </MobileNav>
       </Navbar>

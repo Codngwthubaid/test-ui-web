@@ -10,15 +10,16 @@ import { RestaurantMenu } from "./components/ResturantMenu"
 import BlurGallery from "./components/Gallery"
 import Footer from "./components/Footer"
 import LightRays from "./blocks/Backgrounds/LightRays/LightRays"
+import CurvedLoop from './blocks/TextAnimations/CurvedLoop/CurvedLoop'
 
 export default function App() {
   return (
     <>
       {/* ✅ Fixed full-page background */}
-      <div className="fixed inset-0 -z-10 w-full h-full">
+      {/* <div className="fixed inset-0 -z-10 w-full h-full">
         <LightRays
-          raysOrigin="top-center"
-          raysColor="#078168"
+        raysOrigin="top-center"
+        raysColor="#FFFFF"
           raysSpeed={1.5}
           lightSpread={0.8}
           rayLength={1.2}
@@ -26,8 +27,10 @@ export default function App() {
           mouseInfluence={0.1}
           noiseAmount={0.1}
           distortion={0.05}
-          className="custom-rays"
+          className="bg-gradient-to-t from-neutral-200 to-pink-200"
         />
+      </div> */}
+      <div className="fixed inset-0 -z-10 w-full h-full bg-gradient-to-t from-gray-50 to-pink-200">
       </div>
 
       {/* ✅ Your content on top of the background */}
@@ -36,19 +39,15 @@ export default function App() {
           <NavbarDemo />
         </nav>
 
-        <div className="mt-10 font-bold text-7xl flex justify-center">
-          <TextType
-            text={[
-              "PIZZA & PASTA DAY!",
-              "HOT PIZZAS CREAMY PASTAS",
-              "ORDER NOW!",
-            ]}
-            typingSpeed={75}
-            pauseDuration={1500}
-            showCursor={true}
-            cursorCharacter="_"
-          />
-        </div>
+        {/* <div className="mt-10 font-bold text-7xl flex justify-center text-white">
+          TODAY I'M FEELING ...
+        </div> */}
+        <CurvedLoop
+          marqueeText="     TODAY I'M FEELING ..."
+          speed={0}
+          curveAmount={-200}
+          interactive={false}
+        />
 
         <div className="h-[600px] w-full">
           <CircularGallery bend={3} textColor="#ffffff" borderRadius={0.05} scrollEase={0.02} />
