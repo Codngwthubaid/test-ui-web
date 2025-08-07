@@ -29,12 +29,12 @@ export default function Footer() {
                 <div className="flex gap-4">
                     <Button variant="ghost" size="icon" asChild>
                         <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
-                            <Instagram className="size-7 text-black" />
+                            <Instagram className="size-7 text-white" />
                         </a>
                     </Button>
                     <Button variant="ghost" size="icon" asChild>
                         <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
-                            <Facebook className="size-7 text-black" />
+                            <Facebook className="size-7 text-white" />
                         </a>
                     </Button>
                 </div>
@@ -42,7 +42,7 @@ export default function Footer() {
 
             {/* Bottom - Date, Time, and Author */}
             <div className="flex justify-between items-center flex-wrap mt-6 text-sm text-muted-foreground">
-                <div className="flex justify-between items-center w-full text-black text-lg">
+                <div className="flex justify-between items-center w-full text-white text-lg">
                     <span>Built with ❤️ by codngwthubaid</span>
                     <span>{dateTime}</span>
                 </div>

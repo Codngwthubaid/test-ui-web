@@ -29,11 +29,11 @@ export function NavbarDemo() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   return (
-    <div className="relative w-full">
+    <div className="relative w-full navbar-font">
       <Navbar>
         <NavBody>
             <NavbarLogo/>
-            <NavItems items={navItems} className="text-white text-2xl" />
+            <NavItems items={navItems} className="text-white navbar-font text-2xl" />
         </NavBody>
 
         <MobileNav>

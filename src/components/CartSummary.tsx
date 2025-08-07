@@ -42,7 +42,7 @@ export const CartSummary: React.FC<CartSummaryProps> = ({
             <ShoppingBag className="h-5 w-5" />
             Your Order
           </span>
-          <Badge variant="secondary" className="bg-amber-100 text-amber-800">
+          <Badge variant="secondary" className="bg-pink-100 text-pink-800">
             {itemCount} items
           </Badge>
         </CardTitle>
@@ -96,7 +96,7 @@ export const CartSummary: React.FC<CartSummaryProps> = ({
         <div className="border-t pt-4">
           <div className="flex justify-between items-center mb-4">
             <span className="text-lg font-semibold text-emerald-400">Total:</span>
-            <span className="text-2xl font-bold text-amber-600">₹{total}</span>
+            <span className="text-2xl font-bold text-pink-600">₹{total}</span>
           </div>
 
           <Button

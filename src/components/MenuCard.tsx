@@ -35,14 +35,14 @@ export const MenuCard: React.FC<MenuCardProps> = ({
       </div>
       <CardHeader className="pb-3">
         <div className="flex justify-between items-start">
-          <CardTitle className="text-lg font-bold text-amber-600 transition-colors">
+          <CardTitle className="text-lg font-bold text-pink-600 transition-colors">
             {item.name}
           </CardTitle>
-          <Badge variant="secondary" className="bg-amber-100 text-amber-800 font-semibold">
+          <Badge variant="secondary" className="bg-pink-100 text-pink-800 font-semibold">
             ₹{item.price}
           </Badge>
         </div>
-        <CardDescription className="text-black leading-relaxed">
+        <CardDescription className="text-white leading-relaxed">
           {item.description}
         </CardDescription>
       </CardHeader>
@@ -50,7 +50,7 @@ export const MenuCard: React.FC<MenuCardProps> = ({
       <CardContent className="pb-4">
         <div className="space-y-3">
           <div>
-            <h4 className="text-base font-semibold text-orange-400 mb-2">Ingredients:</h4>
+            <h4 className="text-base font-semibold text-pink-400 mb-2">Ingredients:</h4>
             <div className="flex flex-wrap gap-1">
               {item.ingredients.map((ingredient, index) => (
                 <Badge
@@ -73,7 +73,7 @@ export const MenuCard: React.FC<MenuCardProps> = ({
               <Button
                 variant="outline"
                 size="icon"
-                className="h-8 w-8 rounded-full border-amber-300 hover:bg-amber-50"
+                className="h-8 w-8 rounded-full border-pink-300 hover:bg-pink-50"
                 onClick={() => handleQuantityChange(-1)}
               >
                 <Minus className="h-3 w-3" />
@@ -84,7 +84,7 @@ export const MenuCard: React.FC<MenuCardProps> = ({
               <Button
                 variant="outline"
                 size="icon"
-                className="h-8 w-8 rounded-full border-amber-300 hover:bg-amber-50"
+                className="h-8 w-8 rounded-full border-pink-300 hover:bg-pink-50"
                 onClick={() => handleQuantityChange(1)}
               >
                 <Plus className="h-3 w-3" />

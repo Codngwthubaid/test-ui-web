@@ -28,7 +28,10 @@ export default function App() {
   };
   return (
     <main className='container mx-auto'>
-      <div className="fixed inset-0 -z-10 w-full h-full bg-gradient-to-t from-gray-50 to-pink-200"></div>
+      {/* <div className="fixed inset-0 -z-10 w-full h-full bg-gradient-to-t from-gray-50 to-pink-200"></div> */}
+      <div className="fixed inset-0 -z-10">
+        <img src="./bg.jpg" alt="" className='w-full h-full'/>
+      </div>
       <div className="relative z-10">
         <nav className="w-full pt-5">
           <NavbarDemo />
