@@ -40,7 +40,7 @@ export default function App() {
   };
 
   return (
-    <main className='container mx-auto'>
+    <main>
       <div className="fixed inset-0 -z-10">
         <img src="./bg.jpg" alt="" className='w-full h-full' />
       </div>
@@ -67,7 +67,7 @@ export default function App() {
 
           <div className="relative h-[100px] w-full mx-auto">
             {Array.from("TODAY I'M FEELING").map((char, i) => {
-              const radius = 1200; 
+              const radius = 1200;
               const angle = (Math.PI / 180) * (i * 3 - 25);
               const x = radius * Math.sin(angle);
               const y = radius * (1 - Math.cos(angle));
@@ -96,7 +96,7 @@ export default function App() {
 
 
 
-        <div className="h-[600px] w-full">
+        <div className="h-[600px]">
           <CircularGallery bend={3} textColor="#ffffff" borderRadius={0.05} scrollEase={0.02} />
         </div>
 
@@ -108,7 +108,7 @@ export default function App() {
           </a>
         </div>
 
-        <div id='about' className="mt-28 px-10 flex justify-start gap-x-10 items-start">
+        <div id='about' className="mt-28 px-20 flex justify-start gap-x-10 items-start">
           <TiltedCard
             imageSrc="./cas-owner.jpg"
             altText="CIRCLE & SLICE"
@@ -136,7 +136,7 @@ export default function App() {
         </div>
 
         <div id='menu'>
-          <TextAnimate animation="blurInUp" by="character" once className='mt-20 text-5xl font-bold text-emerald-400 mx-5'>
+          <TextAnimate animation="blurInUp" by="character" once className='mt-20 text-5xl font-bold text-emerald-400 mx-20'>
             OUR MENU
           </TextAnimate>
         </div>
@@ -146,13 +146,13 @@ export default function App() {
         </div>
 
         <div id="gallery">
-          <TextAnimate animation="blurInUp" by="character" once className='mt-20 text-5xl font-bold text-emerald-400 mx-5'>
+          <TextAnimate animation="blurInUp" by="character" once className='mt-20 text-5xl font-bold text-emerald-400 mx-15'>
             OUR GALLERY
           </TextAnimate>
         </div>
 
 
-        <div className="w-full mt-10 flex justify-center items-start">
+        <div className="mt-10 mx-16 flex justify-center items-start">
           <BlurGallery />
         </div>
 
