@@ -10,27 +10,39 @@ import { motion } from 'framer-motion';
 import { TextAnimate } from './components/magicui/text-animate'
 
 export default function App() {
+  // const charVariants = {
+  //   hidden: {
+  //     opacity: 0,
+  //     y: 20,
+  //     filter: 'blur(10px)',
+  //   },
+  //   visible: (index: number) => ({
+  //     opacity: 1,
+  //     y: 0,
+  //     filter: 'blur(0px)',
+  //     transition: {
+  //       delay: index * 0.1,
+  //       duration: 0.5,
+  //     },
+  //   }),
+  // };
+
   const charVariants = {
-    hidden: {
-      opacity: 0,
-      y: 20,
-      filter: 'blur(10px)',
-    },
-    visible: (index: number) => ({
+    hidden: { opacity: 0, y: -20 },
+    visible: (i: number) => ({
       opacity: 1,
       y: 0,
-      filter: 'blur(0px)',
       transition: {
-        delay: index * 0.1,
-        duration: 0.5,
+        delay: i * 0.05,
+        duration: 0.4,
       },
     }),
   };
+
   return (
     <main className='container mx-auto'>
-      {/* <div className="fixed inset-0 -z-10 w-full h-full bg-gradient-to-t from-gray-50 to-pink-200"></div> */}
       <div className="fixed inset-0 -z-10">
-        <img src="./bg.jpg" alt="" className='w-full h-full'/>
+        <img src="./bg.jpg" alt="" className='w-full h-full' />
       </div>
       <div className="relative z-10">
         <nav className="w-full pt-5">
@@ -38,7 +50,7 @@ export default function App() {
         </nav>
 
         <div className="mt-10 flex justify-center">
-          <div className="curved-text curved-text-8xl">
+          {/* <div className="curved-text curved-text-8xl">
             {"TODAY I'M FEELING ...".split('').map((char, index) => (
               <motion.span
                 key={index}
@@ -51,8 +63,38 @@ export default function App() {
                 {char === ' ' ? '\u00A0' : char}
               </motion.span>
             ))}
+          </div> */}
+
+          <div className="relative h-[100px] w-full mx-auto">
+            {Array.from("TODAY I'M FEELING").map((char, i) => {
+              const radius = 1200; 
+              const angle = (Math.PI / 180) * (i * 3 - 25);
+              const x = radius * Math.sin(angle);
+              const y = radius * (1 - Math.cos(angle));
+
+              return (
+                <motion.span
+                  key={i}
+                  className="absolute text-pink-400 text-8xl font-bold"
+                  style={{
+                    left: `calc(50% + ${x}px)`,
+                    top: `${y}px`,
+                    transform: `rotate(${angle * (180 / Math.PI)}deg)`,
+                    transformOrigin: "center",
+                  }}
+                  variants={charVariants}
+                  initial="hidden"
+                  animate="visible"
+                  custom={i}
+                >
+                  {char === ' ' ? '\u00A0' : char}
+                </motion.span>
+              );
+            })}
           </div>
         </div>
+
+
 
         <div className="h-[600px] w-full">
           <CircularGallery bend={3} textColor="#ffffff" borderRadius={0.05} scrollEase={0.02} />
