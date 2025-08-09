@@ -1,30 +1,14 @@
-
-import { useEffect, useState } from 'react';
-import { Instagram, Facebook } from 'lucide-react';
+import { Instagram } from 'lucide-react';
+import { FaTiktok } from "react-icons/fa6";
 import { Button } from '@/components/ui/button';
-import FlipLink from './ui/text-effect-flipper';
+import { FooterLogo } from './FooterLogo';
 
 export default function Footer() {
-    const [dateTime, setDateTime] = useState<string>('');
-
-    useEffect(() => {
-        const updateTime = () => {
-            const now = new Date();
-            const date = now.toLocaleDateString();
-            const time = now.toLocaleTimeString();
-            setDateTime(`${date} ${time}`);
-        };
-
-        updateTime();
-        const interval = setInterval(updateTime, 1000);
-
-        return () => clearInterval(interval);
-    }, []);
-
     return (
         <footer className="w-full bg-transparent px-4 py-6 mt-10">
-            <div className="flex justify-between items-center flex-wrap gap-4">
-                <FlipLink href="#">C&S</FlipLink>
+            <div className="flex justify-between items-center flex-wrap gap-4 navbar-font">
+                {/* <FlipLink href="#">C&S</FlipLink> */}
+                <FooterLogo/>
 
                 <div className="flex gap-4">
                     <Button variant="ghost" size="icon" asChild>
@@ -34,17 +18,9 @@ export default function Footer() {
                     </Button>
                     <Button variant="ghost" size="icon" asChild>
                         <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
-                            <Facebook className="size-7 text-white" />
+                            <FaTiktok className="size-6 text-white" />
                         </a>
                     </Button>
-                </div>
-            </div>
-
-            {/* Bottom - Date, Time, and Author */}
-            <div className="flex justify-between items-center flex-wrap mt-6 text-sm text-muted-foreground">
-                <div className="flex justify-between items-center w-full text-white text-lg">
-                    <span>Built with ❤️ by codngwthubaid</span>
-                    <span>{dateTime}</span>
                 </div>
             </div>
         </footer>

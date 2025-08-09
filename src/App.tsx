@@ -10,48 +10,48 @@ import { motion } from 'framer-motion';
 import { TextAnimate } from './components/magicui/text-animate'
 
 export default function App() {
-  // const charVariants = {
-  //   hidden: {
-  //     opacity: 0,
-  //     y: 20,
-  //     filter: 'blur(10px)',
-  //   },
-  //   visible: (index: number) => ({
-  //     opacity: 1,
-  //     y: 0,
-  //     filter: 'blur(0px)',
-  //     transition: {
-  //       delay: index * 0.1,
-  //       duration: 0.5,
-  //     },
-  //   }),
-  // };
-
   const charVariants = {
-    hidden: { opacity: 0, y: -20 },
-    visible: (i: number) => ({
+    hidden: {
+      opacity: 0,
+      y: 20,
+      filter: 'blur(10px)',
+    },
+    visible: (index: number) => ({
       opacity: 1,
       y: 0,
+      filter: 'blur(0px)',
       transition: {
-        delay: i * 0.05,
-        duration: 0.4,
+        delay: index * 0.1,
+        duration: 0.5,
       },
     }),
   };
 
+  // const charVariants = {
+  //   hidden: { opacity: 0, y: -20 },
+  //   visible: (i: number) => ({
+  //     opacity: 1,
+  //     y: 0,
+  //     transition: {
+  //       delay: i * 0.05,
+  //       duration: 0.4,
+  //     },
+  //   }),
+  // };
+
   return (
     <main>
       <div className="fixed inset-0 -z-10">
-        <img src="./bg.jpg" alt="" className='w-full h-full' />
+        <img src="./bg7.png" alt="" className='w-full h-full' />
       </div>
       <div className="relative z-10">
         <nav className="w-full pt-5">
           <NavbarDemo />
         </nav>
 
-        <div className="mt-10 flex justify-center">
-          {/* <div className="curved-text curved-text-8xl">
-            {"TODAY I'M FEELING ...".split('').map((char, index) => (
+        <div className="mt-20 flex justify-center">
+          <div className="curved-text curved-text-8xl">
+            {"TODAY I'M FEELING...".split('').map((char, index) => (
               <motion.span
                 key={index}
                 className="font-bold text-8xl text-white"
@@ -63,19 +63,26 @@ export default function App() {
                 {char === ' ' ? '\u00A0' : char}
               </motion.span>
             ))}
+          </div>
+
+
+          {/* <div className="relative h-[100px] w-full mx-auto navbar-font">
+            TODAY I'M FEELING...
           </div> */}
 
-          <div className="relative h-[100px] w-full mx-auto">
-            {Array.from("TODAY I'M FEELING").map((char, i) => {
-              const radius = 1200;
-              const angle = (Math.PI / 180) * (i * 3 - 25);
+
+
+          {/* <div className="relative h-[100px] w-full mx-auto">
+            {Array.from("TODAY IM FEELING").map((char, i) => {
+              const radius = 3000; // Increased radius for less curve
+              const angle = (Math.PI / 180) * (i * 1 - 8);
               const x = radius * Math.sin(angle);
               const y = radius * (1 - Math.cos(angle));
 
               return (
                 <motion.span
                   key={i}
-                  className="absolute text-pink-400 text-8xl font-bold"
+                  className="absolute text-white text-8xl font-bold"
                   style={{
                     left: `calc(50% + ${x}px)`,
                     top: `${y}px`,
@@ -91,7 +98,7 @@ export default function App() {
                 </motion.span>
               );
             })}
-          </div>
+          </div> */}
         </div>
 
 

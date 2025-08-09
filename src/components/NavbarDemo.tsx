@@ -33,7 +33,7 @@ export function NavbarDemo() {
       <Navbar>
         <NavBody>
             <NavbarLogo/>
-            <NavItems items={navItems} className="text-white navbar-font text-2xl" />
+            <NavItems items={navItems} className="text-pink-400 navbar-font text-2xl" />
         </NavBody>
 
         <MobileNav>
